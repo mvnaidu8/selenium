@@ -1,46 +1,61 @@
 package in.mvnaidu.java.test;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class Test {
+	
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		String URL = "https://www.phptravels.net/home";
-		driver.get(URL);
-		String Title = driver.getTitle();
-		System.out.println(Title);
-		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/button")).click(); //Accepts the Cookie
+		driver.get("https://www.testandquiz.com/selenium/testing.html");
+		//Text Box
+		driver.findElement(By.id("fname")).sendKeys("Venkat");
 		
-		// Currency Selector Begins
+		//Button
+		driver.findElement(By.id("idOfButton")).click();
 		
-		  driver.findElement(By.id("dropdownCurrency")).click(); //Clicks the Currency Changer Drop-down
-		  //driver.findElement(By.linkText("USD")).click(); //Changes the currency to EUR 
-		  driver.findElement(By.linkText("EUR")).click(); //Changes the currency to EUR
-		 		
+		//Dropdown
+		Select dropDown = new Select(driver.findElement(By.id("testingDropdown")));
+		dropDown.selectByVisibleText("Manual Testing");
 		
-		//Currency Selector Ends
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//Radio-Button
+		WebElement radioButton = driver.findElement(By.id("male"));
+		radioButton.click();
+		if(radioButton.isSelected()) {
+			System.out.println("Male Selected");
+		}
+		else {
+			System.out.println("Male not Selected");
+		}
 		
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("/html/body/div[2]/header/div[1]/div/div/div[2]/div/ul/li[3]/div/a")).click(); //My Account Drop Down
-		Thread.sleep(2000);
-		driver.findElement(By.linkText("Login")).click();
-		driver.findElement(By.name("username")).sendKeys("user@phptravels.com");
-		driver.findElement(By.name("password")).sendKeys("demouser");
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div[1]/div[2]/form/button")).click(); //Login Button
+		//Checkbox
+		driver.findElement(By.cssSelector("input.Automation")).click();
 		
+		/*
+		 * //Double Click Action Class WebElement dbc =
+		 * driver.findElement(By.id("dblClkBtn")); Actions builder = new
+		 * Actions(driver); Action doubleClick = builder.doubleClick(dbc).build();
+		 * doubleClick.perform();
+		 */
 		
-		
-
+				
+				//driver.close();
+		System.out.println("Test Ended");
 	}
 
 }
