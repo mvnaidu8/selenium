@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.Alert;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -46,13 +47,19 @@ public class Test {
 		//Checkbox
 		driver.findElement(By.cssSelector("input.Automation")).click();
 		
-		/*
-		 * //Double Click Action Class WebElement dbc =
-		 * driver.findElement(By.id("dblClkBtn")); Actions builder = new
-		 * Actions(driver); Action doubleClick = builder.doubleClick(dbc).build();
-		 * doubleClick.perform();
-		 */
+		//getText
+		String text = driver.findElement(By.xpath("/html/body/div/div[3]")).getText();
+		System.out.println(text);
 		
+		 //Double Click Action Class 
+		 WebElement dbcbutton = driver.findElement(By.id("dblClkBtn")); 
+		 Actions builder = new Actions(driver); 
+		 Action doubleClick = builder.doubleClick(dbcbutton).build();
+		 doubleClick.perform();
+		
+		 //Alert Handling
+		 Alert alert = (Alert) driver.switchTo().alert();
+		 alert.accept();
 				
 				//driver.close();
 		System.out.println("Test Ended");
