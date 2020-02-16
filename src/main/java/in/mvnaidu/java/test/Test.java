@@ -1,19 +1,20 @@
 package in.mvnaidu.java.test;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.interactions.Action;
+//import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.support.ui.Select;
+//import org.openqa.selenium.Alert;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import org.openqa.selenium.Alert;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class Test {
@@ -70,14 +71,24 @@ public class Test {
 		 * //Print Current Window Title System.out.println("Title = "
 		 * +driver.getTitle()); driver.close(); System.out.println("Test Ended");
 		 */
+        
+        
+		/*
+		 * Test Links 
+		 * https://rahulshettyacademy.com/AutomationPractice/
+		 * https://rahulshettyacademy.com/seleniumPractise/#/
+		 * https://rahulshettyacademy.com/angularpractice/
+		 */        
 		
 		//Mvn mvnObj = new Mvn();
 		//mvnObj.web();
 		//Udemy udemyObj = new Udemy();
 		//udemyObj.udemy();
         
-        Academy acadObj = new Academy();
-        acadObj.academy();
+        //Academy acadObj = new Academy();
+        //acadObj.academy();
+        
+        DropDowns.main(null);
         
 	}
 
