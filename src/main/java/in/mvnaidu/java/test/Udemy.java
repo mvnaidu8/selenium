@@ -1,6 +1,5 @@
 package in.mvnaidu.java.test;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,7 +12,7 @@ public class Udemy {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://login.salesforce.com/");
-		if(driver.findElement(By.cssSelector("#username")).isDisplayed()) {
+		if (driver.findElement(By.cssSelector("#username")).isDisplayed()) {
 			System.out.println("#username is displayed");
 		}
 		driver.findElement(By.cssSelector("#username")).sendKeys("Username");
@@ -24,6 +23,5 @@ public class Udemy {
 		driver.close();
 		System.out.println("Success");
 	}
-	
-	
+
 }

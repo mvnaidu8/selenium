@@ -13,25 +13,21 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 
-
+import in.mvnaidu.java.assignment.*;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class Test {
-	
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		//WebDriverManager.chromedriver().setup();
-		//WebDriver driver = new ChromeDriver();
-		
-		
+		// WebDriverManager.chromedriver().setup();
+		// WebDriver driver = new ChromeDriver();
+
 		File file = new File("systemout");
-        //Instantiating the PrintStream class
-        PrintStream stream = new PrintStream(file);
-        System.out.println("From now on "+file.getAbsolutePath()+" will be your console");
-        System.setOut(stream);
-		
-		
+		// Instantiating the PrintStream class
+		PrintStream stream = new PrintStream(file);
+		System.out.println("From now on " + file.getAbsolutePath() + " will be your console");
+		System.setOut(stream);
+
 		/*
 		 * driver.get("https://www.testandquiz.com/selenium/testing.html");
 		 * System.out.println("Current URL = "+ driver.getCurrentUrl()); //Text Box
@@ -71,25 +67,37 @@ public class Test {
 		 * //Print Current Window Title System.out.println("Title = "
 		 * +driver.getTitle()); driver.close(); System.out.println("Test Ended");
 		 */
-        
-        
+
 		/*
-		 * Test Links 
-		 * https://rahulshettyacademy.com/AutomationPractice/
+		 * Test Links https://rahulshettyacademy.com/AutomationPractice/
 		 * https://rahulshettyacademy.com/seleniumPractise/#/
 		 * https://rahulshettyacademy.com/angularpractice/
-		 */        
-		
-		//Mvn mvnObj = new Mvn();
-		//mvnObj.web();
-		//Udemy udemyObj = new Udemy();
-		//udemyObj.udemy();
-        
-        //Academy acadObj = new Academy();
-        //acadObj.academy();
-        
-        DropDowns.main(null);
-        
+		 */
+
+		// Mvn mvnObj = new Mvn();
+		// mvnObj.web();
+		// Udemy udemyObj = new Udemy();
+		// udemyObj.udemy();
+
+		// Academy acadObj = new Academy();
+		// acadObj.academy();
+
+		// DropDowns.main(null);
+
+		// SuggestiveDropDown SDrop = new SuggestiveDropDown();
+		// SDrop.Spicy();
+
+		// Checkbox cb = new Checkbox();
+		// cb.main(null);
+
+		// JSAlerts Alerts = new JSAlerts();
+		// Alerts.alerts();
+
+		//Assignment2 asg = new Assignment2();
+		//asg.Cleartrip();
+
+		EcomApp eca = new EcomApp();
+		eca.ecom();
 	}
 
 }

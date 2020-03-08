@@ -9,28 +9,15 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DropDowns {
 
-	
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		
+
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.spicejet.com/");
-		
-		
-		
-		/*
-		 * Thread.sleep(1000); Boolean b =
-		 * driver.findElements(By.id("ctl00_mainContent_DropDownListCurrency")).isEmpty(
-		 * ); if(!b) { 
-		 * Select cur = new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
-		 * //cur.selectByIndex(2); //cur.selectByValue("INR");
-		 * //cur.selectByVisibleText("INR"); }
-		 */
-		
-		
-		//Passengers Selector
+
+		// Passengers Selector
 		driver.findElement(By.id("divpaxinfo")).click();
 		Select adult = new Select(driver.findElement(By.id("ctl00_mainContent_ddl_Adult")));
 		adult.selectByValue("2");
@@ -39,15 +26,25 @@ public class DropDowns {
 		Select infant = new Select(driver.findElement(By.id("ctl00_mainContent_ddl_Infant")));
 		infant.selectByIndex(0);
 		driver.findElement(By.id("divpaxinfo")).click();
-		//Currency Selector
+		// Currency Selector
 		Select cur = new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
-		cur.selectByIndex(2); //cur.selectByValue("INR");
-		cur.selectByVisibleText("INR"); 
-		
+		cur.selectByIndex(2); // cur.selectByValue("INR");
+		cur.selectByVisibleText("INR");
+
 		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
-		
-		
-		
+
+		// Select From dropdown
+		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
+		Thread.sleep(1000);
+		// Select from city
+		driver.findElement(By.xpath("//a[@value='MAA']")).click();
+		Thread.sleep(3000);
+		// Select to city
+		// driver.findElement(By.xpath("(//a[@value='DEL'])[2]")).click(); //Using Index
+
+		driver.findElement(By.xpath(
+				"//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR']//td[@class='mapbg']//a[@value='DEL']"))
+				.click(); // Using Parent Child Relationship
 
 	}
 
