@@ -2,8 +2,6 @@ package in.mvnaidu.java.test;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -85,17 +83,14 @@ public class EcomApp {
 		w.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")));
 		driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click();
-		w.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter promo code']")));
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter promo code']")));
 		driver.findElement(By.xpath("//input[@placeholder='Enter promo code']")).sendKeys("rahulshettyacademy");
 		driver.findElement(By.xpath("//button[@class='promoBtn']")).click();
 		driver.findElement(By.xpath("//input[@placeholder='Enter promo code']")).clear();
-		w.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//span[@class='promoInfo']")));
+		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='promoInfo']")));
 		System.out
 				.println("Promo Code Status = " + driver.findElement(By.xpath("//span[@class='promoInfo']")).getText());
 
-		driver.quit();
 	}// addItems
 
 }

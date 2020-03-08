@@ -98,6 +98,9 @@ public class Test {
 
 		EcomApp eca = new EcomApp();
 		eca.ecom();
-	}
+	
+	
+	//System.exit(0);
+		}
 
 }

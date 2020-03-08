@@ -61,6 +61,7 @@
          		<version>1.6.0</version>
             	<configuration>
               		<mainClass>in.mvnaidu.java.test.Test</mainClass>
+              		<cleanupDaemonThreads>false</cleanupDaemonThreads>
             	</configuration>
      		</plugin>
   		</plugins>
