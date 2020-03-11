@@ -1,12 +1,18 @@
 package in.mvnaidu.java.test;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -77,12 +83,16 @@ public class EcomApp {
 
 		}
 
-		WebDriverWait w = new WebDriverWait(driver, 10);
+		// Explicit wait - WebDriverWait
+		 WebDriverWait w = new WebDriverWait(driver,10);
+
+		//Wait<WebDriver> fw = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
 		driver.findElement(By.xpath("//img[@alt='Cart']")).click();
-		// Thread.sleep(1000);
 		w.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")));
+
 		driver.findElement(By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]")).click();
+		
 		w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter promo code']")));
 		driver.findElement(By.xpath("//input[@placeholder='Enter promo code']")).sendKeys("rahulshettyacademy");
 		driver.findElement(By.xpath("//button[@class='promoBtn']")).click();
