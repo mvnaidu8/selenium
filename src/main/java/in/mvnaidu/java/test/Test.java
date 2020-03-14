@@ -96,10 +96,17 @@ public class Test {
 		//Assignment2 asg = new Assignment2();
 		//asg.Cleartrip();
 
-		EcomApp eca = new EcomApp();
-		eca.ecom();
+		//EcomApp eca = new EcomApp();
+		//eca.ecom();
+		
+		//ActionsC actObj = new ActionsC();
+		//actObj.ActionM();
 	
+		//MultiWin mwinObj = new MultiWin();
+		//mwinObj.MultiWinM();
 	
+		MultiWinAssg MWAObj = new MultiWinAssg();
+		MWAObj.MultiWin();
 	//System.exit(0);
 		}
 
