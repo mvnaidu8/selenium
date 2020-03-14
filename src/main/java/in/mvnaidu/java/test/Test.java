@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import in.mvnaidu.java.assignment.*;
+//import in.mvnaidu.java.assignment.*;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Test {
@@ -105,8 +105,11 @@ public class Test {
 		//MultiWin mwinObj = new MultiWin();
 		//mwinObj.MultiWinM();
 	
-		MultiWinAssg MWAObj = new MultiWinAssg();
-		MWAObj.MultiWin();
+		//MultiWinAssg MWAObj = new MultiWinAssg();
+		//MWAObj.MultiWin();
+		
+		FramesClass FObj = new FramesClass();
+		FObj.FramesM();
 	//System.exit(0);
 		}
 
