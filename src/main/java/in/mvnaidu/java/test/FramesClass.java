@@ -12,16 +12,16 @@ public class FramesClass {
 	public void FramesM() {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		//driver.manage().window().maximize();
+		// driver.manage().window().maximize();
 		driver.get("https://jqueryui.com/droppable/");
-		System.out.println("FrameCount = "+driver.findElements(By.tagName("iframe")).size());
+		System.out.println("FrameCount = " + driver.findElements(By.tagName("iframe")).size());
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
-		//driver.findElement(By.id("draggable")).click();
+		// driver.findElement(By.id("draggable")).click();
 		Actions a = new Actions(driver);
 		WebElement source = driver.findElement(By.id("draggable"));
 		WebElement target = driver.findElement(By.id("droppable"));
 		a.dragAndDrop(source, target).build().perform();
-		//Switch back from iFrame
+		// Switch back from iFrame
 		driver.switchTo().defaultContent();
 	}
 }
