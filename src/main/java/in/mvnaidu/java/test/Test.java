@@ -114,8 +114,11 @@ public class Test {
 		//FramesAssg FAObj = new FramesAssg();
 		//FAObj.FramesM();
 		
-		WebDriverScope WDSObj = new WebDriverScope();
-		WDSObj.WebDriverScopeM();
+		//WebDriverScope WDSObj = new WebDriverScope();
+		//WDSObj.WebDriverScopeM();
+		
+		Assignment6 Assg6Obj = new Assignment6();
+		Assg6Obj.Assg6M();		
 	//System.exit(0);
 		}
 
