@@ -23,6 +23,7 @@ public class CalendarUI {
 		}
 
 		List<WebElement> dates = driver.findElements(By.className("day"));
+		dates.size();
 		// Grab common attribute//Put into list and iterate
 		int count = driver.findElements(By.className("day")).size();
 

@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import in.mvnaidu.java.assignment.*;
+//import in.mvnaidu.java.assignment.*;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Test {
@@ -93,33 +93,36 @@ public class Test {
 		// JSAlerts Alerts = new JSAlerts();
 		// Alerts.alerts();
 
-		//Assignment2 asg = new Assignment2();
-		//asg.Cleartrip();
+		// Assignment2 asg = new Assignment2();
+		// asg.Cleartrip();
 
-		//EcomApp eca = new EcomApp();
-		//eca.ecom();
-		
-		//ActionsC actObj = new ActionsC();
-		//actObj.ActionM();
-	
-		//MultiWin mwinObj = new MultiWin();
-		//mwinObj.MultiWinM();
-	
-		//MultiWinAssg MWAObj = new MultiWinAssg();
-		//MWAObj.MultiWin();
-		
-		//FramesClass FObj = new FramesClass();
-		//FObj.FramesM();
-		
-		//FramesAssg FAObj = new FramesAssg();
-		//FAObj.FramesM();
-		
-		//WebDriverScope WDSObj = new WebDriverScope();
-		//WDSObj.WebDriverScopeM();
-		
-		Assignment6 Assg6Obj = new Assignment6();
-		Assg6Obj.Assg6M();		
-	//System.exit(0);
-		}
+		// EcomApp eca = new EcomApp();
+		// eca.ecom();
+
+		// ActionsC actObj = new ActionsC();
+		// actObj.ActionM();
+
+		// MultiWin mwinObj = new MultiWin();
+		// mwinObj.MultiWinM();
+
+		// MultiWinAssg MWAObj = new MultiWinAssg();
+		// MWAObj.MultiWin();
+
+		// FramesClass FObj = new FramesClass();
+		// FObj.FramesM();
+
+		// FramesAssg FAObj = new FramesAssg();
+		// FAObj.FramesM();
+
+		// WebDriverScope WDSObj = new WebDriverScope();
+		// WDSObj.WebDriverScopeM();
+
+		// Assignment6 Assg6Obj = new Assignment6();
+		// Assg6Obj.Assg6M();
+
+		TableGrid TGObj = new TableGrid();
+		TGObj.TableGridM();
+		// System.exit(0);
+	}
 
 }
