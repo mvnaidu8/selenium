@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 
-//import in.mvnaidu.java.assignment.*;
+import in.mvnaidu.java.assignment.*;
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Test {
@@ -120,8 +120,11 @@ public class Test {
 		// Assignment6 Assg6Obj = new Assignment6();
 		// Assg6Obj.Assg6M();
 
-		TableGrid TGObj = new TableGrid();
-		TGObj.TableGridM();
+		//TableGrid TGObj = new TableGrid();
+		//TGObj.TableGridM();
+		
+		Assignment7 assg7Obj = new Assignment7();
+		assg7Obj.assg7();
 		// System.exit(0);
 	}
 
