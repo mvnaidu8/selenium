@@ -1,3 +1,4 @@
+test-output/
 target/
 *.log
 pom.xml.tag
