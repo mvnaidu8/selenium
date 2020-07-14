@@ -3,8 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="in.mvnaidu.java.maven.test.NewTest"/>
-      <class name ="in.mvnaidu.java.maven.test.SecondTest"/>
+      <!-- <class name="in.mvnaidu.java.maven.test.NewTest"/>
+      <class name ="in.mvnaidu.java.maven.test.SecondTest"/> -->
+      <class name="in.mvnaidu.java.maven.test.ExtentReportsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
