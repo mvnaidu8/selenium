@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+/*import com.aventstack.extentreports.ExtentTest;*/
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.annotations.BeforeTest;
 

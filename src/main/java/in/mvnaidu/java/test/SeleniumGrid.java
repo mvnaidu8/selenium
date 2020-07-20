@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class SeleniumGrid {
 
 	public static void main(String[] args) throws MalformedURLException {
-		// TODO Auto-generated method stub
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
 		dc.setPlatform(Platform.WINDOWS);

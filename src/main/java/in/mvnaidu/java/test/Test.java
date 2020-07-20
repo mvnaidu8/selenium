@@ -39,7 +39,7 @@ public class Test {
 		 * Select(driver.findElement(By.id("testingDropdown")));
 		 * dropDown.selectByVisibleText("Manual Testing");
 		 * 
-		 * try { Thread.sleep(1000); } catch (InterruptedException e) { // TODO
+		 * try { Thread.sleep(1000); } catch (InterruptedException e) {
 		 * Auto-generated catch block e.printStackTrace(); }
 		 * 
 		 * //Radio-Button WebElement radioButton = driver.findElement(By.id("male"));

@@ -10,7 +10,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DropDowns {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
